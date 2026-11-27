@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050b14">
+  <title>JARVIS AI | GM NABID</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+
+    <header class="topbar">
+      <button class="menu-button" id="menuButton" type="button" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="brand">
+        <div class="brand-symbol">J</div>
+        <div>
+          <h2>JARVIS</h2>
+          <span>ARTIFICIAL INTELLIGENCE</span>
+        </div>
+      </div>
+
+      <div class="system-status">
+        <span class="status-light"></span>
+        SYSTEM ONLINE
+      </div>
+    </header>
+
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-title">MAIN SYSTEM</div>
+      <button class="nav-item active" data-view="home" type="button">OVERVIEW</button>
+      <button class="nav-item" data-view="chat" type="button">AI CONVERSATION</button>
+      <button class="nav-item" data-view="image" type="button">IMAGE STUDIO</button>
+
+      <div class="sidebar-bottom">
+        <span>DEVELOPED BY</span>
+        <strong>GM NABID</strong>
+      </div>
+    </aside>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-label">
+          <span class="line"></span>
+          PERSONAL AI ASSISTANT
+          <span class="line"></span>
+        </div>
+
+        <div class="reactor">
+          <div class="reactor-outer"></div>
+          <div class="reactor-middle"></div>
+          <div class="reactor-inner"></div>
+          <div class="reactor-core">J</div>
+          <div class="reactor-dot"></div>
+        </div>
+
+        <div class="hero-title">
+          <h1>SYSTEMS <span>ONLINE</span></h1>
+          <p>Your personal intelligence system is ready.</p>
+        </div>
+
+        <div class="system-readout">
+          <div><span>CORE STATUS</span><strong>ACTIVE</strong></div>
+          <div><span>NETWORK</span><strong>CONNECTED</strong></div>
+          <div><span>ASSISTANT</span><strong>JARVIS AI</strong></div>
+        </div>
+      </section>
+
+      <section class="workspace">
+        <div class="section-heading">
+          <div>
+            <span class="section-label">CONTROL CENTER</span>
+            <h2>AI Workspace</h2>
+          </div>
+          <span class="secure-status">SECURE SESSION</span>
+        </div>
+
+        <div class="tool-grid">
+          <button class="tool-card selected" data-tool="chat" type="button">
+            <span class="tool-icon">AI</span>
+            <strong>AI CHAT</strong>
+            <small>Ask anything</small>
+            <span class="card-arrow">OPEN</span>
+          </button>
+
+          <button class="tool-card" data-tool="image" type="button">
+            <span class="tool-icon">IMG</span>
+            <strong>IMAGE STUDIO</strong>
+            <small>Generate images</small>
+            <span class="card-arrow">OPEN</span>
+          </button>
+
+          <button class="tool-card" data-tool="code" type="button">
+            <span class="tool-icon code-icon">&lt;/&gt;</span>
+            <strong>CODE ASSISTANT</strong>
+            <small>Build and debug code</small>
+            <span class="card-arrow">OPEN</span>
+          </button>
+
+          <button class="tool-card unavailable" data-tool="video" type="button">
+            <span class="tool-icon">VID</span>
+            <strong>VIDEO STUDIO</strong>
+            <small>Video generation</small>
+            <span class="card-arrow">COMING SOON</span>
+          </button>
+
+          <button class="tool-card unavailable" data-tool="music" type="button">
+            <span class="tool-icon">AUD</span>
+            <strong>MUSIC STUDIO</strong>
+            <small>Music generation</small>
+            <span class="card-arrow">COMING SOON</span>
+          </button>
+        </div>
+
+        <section class="workspace-panel" id="chatPanel">
+          <div class="panel-heading">
+            <div>
+              <span class="section-label">JARVIS INTERFACE</span>
+              <h3>AI Conversation</h3>
+            </div>
+            <span class="live-label">LIVE</span>
+          </div>
+
+          <div class="chat-messages" id="chatMessages" aria-live="polite">
+            <div class="ai-message">
+              <div class="message-label">JARVIS</div>
+              <p>System initialized. How can I assist you today?</p>
+            </div>
+          </div>
+
+          <form class="message-form" id="chatForm">
+            <textarea
+              id="chatInput"
+              rows="1"
+              placeholder="Enter your message..."
+              aria-label="Message"
+            ></textarea>
+            <button type="submit" id="sendButton">SEND</button>
+          </form>
+
+          <div class="panel-footer">
+            <span>AI responses may need verification.</span>
+            <span>POWERED BY CLOUDFLARE AI</span>
+          </div>
+        </section>
+
+        <section class="workspace-panel hidden" id="imagePanel">
+          <div class="panel-heading">
+            <div>
+              <span class="section-label">GENERATIVE SYSTEM</span>
+              <h3>Image Studio</h3>
+            </div>
+            <span class="live-label">BETA</span>
+          </div>
+
+          <label class="field-label" for="imagePrompt">IMAGE DESCRIPTION</label>
+
+          <textarea
+            id="imagePrompt"
+            class="image-prompt"
+            rows="4"
+            placeholder="Describe the image you want to generate..."
+          ></textarea>
+
+          <button class="primary-button" id="generateImage" type="button">
+            GENERATE IMAGE
+          </button>
+
+          <div class="image-result" id="imageResult">
+            <span>GENERATED IMAGE WILL APPEAR HERE</span>
+          </div>
+
+          <a
+            class="download-link hidden"
+            id="downloadImage"
+            download="jarvis-image.png"
+          >DOWNLOAD IMAGE</a>
+        </section>
+
+        <div class="system-notice">
+          <strong>FEATURE STATUS</strong>
+          <p>
+            Video generation, music generation and image understanding
+            require additional AI services. These features are not connected yet.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      JARVIS AI <span class="footer-divider">/</span> DEVELOPED BY GM NABID
+    </footer>
+
+  </div>
+</body>
+</html>

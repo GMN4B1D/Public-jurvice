@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050b16">
+  <title>JARVIS AI | Personal Assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="logo">J.A.R.V.I.S<span> AI</span></div>
+    <div class="status">
+      <span class="dot"></span> SYSTEM ONLINE
+    </div>
+  </header>
+
+  <main class="dashboard">
+
+    <section class="hero">
+      <p class="eyebrow">PERSONAL ARTIFICIAL INTELLIGENCE</p>
+      <h1>GOOD DAY, <span>MASTER.</span></h1>
+      <p class="subtitle">I am JARVIS. How may I assist you today?</p>
+
+      <div class="reactor">
+        <div class="ring ring-one"></div>
+        <div class="ring ring-two"></div>
+        <div class="ring ring-three"></div>
+        <div class="core">J</div>
+      </div>
+
+      <p class="listening" id="status">SYSTEM READY</p>
+    </section>
+
+    <section class="tools">
+      <button class="tool" data-tool="chat">
+        <span>◉</span>
+        <strong>AI CHAT</strong>
+        <small>Talk with JARVIS</small>
+      </button>
+
+      <button class="tool" data-tool="image">
+        <span>▧</span>
+        <strong>IMAGE STUDIO</strong>
+        <small>Create AI Images</small>
+      </button>
+
+      <button class="tool" data-tool="video">
+        <span>▷</span>
+        <strong>VIDEO STUDIO</strong>
+        <small>Create AI Videos</small>
+      </button>
+
+      <button class="tool" data-tool="music">
+        <span>♫</span>
+        <strong>MUSIC STUDIO</strong>
+        <small>Create Original Music</small>
+      </button>
+
+      <button class="tool" data-tool="voice">
+        <span>◖</span>
+        <strong>VOICE MODE</strong>
+        <small>Speak with JARVIS</small>
+      </button>
+
+      <button class="tool" data-tool="memory">
+        <span>◇</span>
+        <strong>MEMORY</strong>
+        <small>Personal Memory</small>
+      </button>
+    </section>
+
+    <section class="chat-panel">
+      <h2>JARVIS TERMINAL</h2>
+      <div id="chat">
+        <div class="message bot">
+          Hello Master. All systems are ready.
+        </div>
+      </div>
+
+      <form id="chatForm">
+        <input
+          id="message"
+          type="text"
+          placeholder="Ask JARVIS anything..."
+          autocomplete="off"
+        >
+        <button type="submit">➤</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    JARVIS AI © 2026 | PERSONAL AI SYSTEM
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

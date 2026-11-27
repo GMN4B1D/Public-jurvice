@@ -1,7 +1,4 @@
-
-const API_BASE = https://bitter-hill-e8b3.gmnabid6.workers.dev/
-
-const chatForm = document.getElementById("chatForm");
+const API_BASE = "https://bitter-hill-e8b3.gmnabid6.workers.dev";const chatForm = document.getElementById("chatForm");
 const chatInput = document.getElementById("chatInput");
 const chatMessages = document.getElementById("chatMessages");
 const sendButton = document.getElementById("sendButton");
